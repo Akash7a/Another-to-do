@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+form {
+    padding: 20px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px gray, -5px -5px 10px rgb(217, 204, 204);
+    width: 50%;
+    border-radius: 10px;
+    margin: 30px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input,
+button {
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+form button {
+    background-color: rgb(8, 207, 158);
+    color: white;
+    text-shadow: 0 0 5px black;
+    border: 0;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: rgb(4, 110, 75);
+    transition: all 0.2s linear;
+}
+
+.task-container {
+    margin: 30px auto;
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.allTask {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: aliceblue;
+    padding: 10px;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+    position: relative;
+}
+
+.allTask li {
+    list-style: none;
+    position: relative;
+    margin: 20px 0;
+}
+ 
+
+.allTask li::after {
+    content: "";
+    width: 0%;
+    background-color: rgb(9, 129, 176);
+    height: 1.5px;
+    position: absolute;
+    margin-top: 5px;
+    display: block;
+    transition: width 0.7s ease-in-out;
+}
+
+.allTask li:hover::after {
+    width: 50%;
+}
+.items{
+    position: relative;
+}
+.controllers{
+    position: absolute;
+    right: 5px;
+    top: -15px;
+    display: flex;
+    gap: 10px;
+}
+.complete{
+    color: rgb(138, 139, 138);
+    text-decoration: line-through;
+}
+.greet_text{
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    text-align: center;
+    padding: 10px;
+}
